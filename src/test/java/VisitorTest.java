@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import visitor.Visitor;
 
 import static junit.framework.TestCase.assertEquals;
 
