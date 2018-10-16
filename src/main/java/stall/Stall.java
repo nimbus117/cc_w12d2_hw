@@ -1,6 +1,9 @@
 package stall;
 
-public abstract class Stall {
+import ThemePark.ITicketed;
+import visitor.Visitor;
+
+public abstract class Stall implements ITicketed {
     private String name;
     private String ownerName;
     private int parkingSpot;
@@ -21,5 +24,15 @@ public abstract class Stall {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public double defaultPrice() {
+        return 5;
+    }
+
+    @Override
+    public double priceFor(Visitor visitor) {
+        return defaultPrice();
     }
 }
