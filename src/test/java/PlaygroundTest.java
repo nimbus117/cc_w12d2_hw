@@ -24,4 +24,11 @@ public class PlaygroundTest {
         Visitor visitor = new Visitor(16,120, 10);
         assertFalse(playground.isAllowedTo(visitor));
     }
+
+    @Test
+    public void hasRating() {
+        Playground playground = new Playground("Playground");
+        playground.setRating(4);
+        assertEquals(4, playground.getRating());
+    }
 }
